@@ -10,6 +10,26 @@ public class FlamingNinjaStar {
 		int flameSize = 130;		//the length of the flaming arms
 		
 		// Make a new robot, and set it's pen down.
+		Robot rob = new Robot();
+		rob.penDown();
+		rob.setSpeed(100);
+		rob.setWindowSize(800, 800);
+		int count = 0;
+		
+		rob.setPenColor(255, 140, 0);
+		while (count < 25) {
+			
+			rob.turn(45);
+			rob.move(64);
+			rob.turn(-40);
+			rob.move(flameSize);
+			rob.turn(170);
+			rob.move(flameSize);
+			rob.turn(64);
+			rob.move(baseSize);
+			count += 1;
+		}
+		
 
 		// Set the robot speed to 100
 		
@@ -49,4 +69,6 @@ public class FlamingNinjaStar {
 		// LOOP   When you have one arm looking right, change your loop to repeat 25 times and run the program.
 		
 	}
-}
+		
+		}
+
